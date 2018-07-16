@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/resend_opt_layout"
+    android:layout_marginTop="20dip"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/text_style.NORMAL_CAPTION_DARK"
+        android:layout_gravity="center"
+        android:text="@string/resend_otp" />
+
+    <TextView
+        android:id="@+id/btn_resend_otp"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_gravity="center"
+        android:padding="10dip"
+        android:text="@string/resend"
+        android:textStyle="bold" />
+</LinearLayout>

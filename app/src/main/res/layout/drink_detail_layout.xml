@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_dashboard" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/btn_layout_bot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/button_add_to_cart_cancel_layout" />
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            style="@style/nested_scroll_view_style"
+            android:layout_above="@+id/btn_layout_bot">
+
+            <LinearLayout style="@style/nested_scroll_view_container_style">
+
+                <include layout="@layout/balance_layout" />
+
+                <android.support.v7.widget.CardView style="@style/card_view_style">
+
+                    <RelativeLayout style="@style/card_view_container_style">
+
+                        <include layout="@layout/food_drink_detail_layout" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:id="@+id/drink_icon"
+                            android:layout_height="@dimen/_90sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/vodka" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    style="@style/card_view_style"
+                    app:contentPadding="10dip">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/text_style.NORMAL_CAPTION_DARK"
+                            android:text="@string/drink_option"
+                            android:textStyle="bold" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:scrollbars="none">
+
+                            <RadioGroup
+                                android:id="@+id/drink_option_radio_group"
+                                style="@style/radio_group_style" />
+                        </HorizontalScrollView>
+
+                        <TextView
+                            style="@style/text_style.NORMAL_CAPTION_DARK"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/mixtures"
+                            android:textStyle="bold" />
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:scrollbars="none">
+
+                            <RadioGroup
+                                android:id="@+id/mixtures_radio_group"
+                                style="@style/radio_group_style" />
+                        </HorizontalScrollView>
+
+                        <include layout="@layout/detail_add_cancel_cart_quantity" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_20sdp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+</LinearLayout>

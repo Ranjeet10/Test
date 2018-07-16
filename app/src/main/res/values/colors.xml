@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2A353A</color>
+    <color name="colorPrimary_light">#676f73</color>
+    <color name="colorPrimaryDark">#2A353A</color>
+    <color name="colorAccent">#2A353A</color>
+    <color name="background">#ededed</color>
+
+    <color name="white">#ffffff</color>
+    <color name="light_white">#e6e6e6</color>
+    <color name="light_white_25">#78d1d1d1</color>
+    <color name="light_white_50">#78e6e6e6</color>
+    <color name="bg">#f0d2d2d2</color>
+    <color name="very_dark_grey">#151515</color>
+    <color name="dark_grey">#252525</color>
+    <color name="light_grey">#313131</color>
+    <color name="very_light_grey">#3e3e3e</color>
+    <color name="hint_color">#717171</color>
+    <color name="badge_red">#DB4707</color>
+    <color name="divider_color">#35454A</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_50">#64000000</color>
+    <color name="transparent_75">#32000000</color>
+    <color name="transparent_black">#9d000000</color>
+    <color name="black">#000000</color>
+    <color name="search_bg">#20252A</color>
+    <color name="green">#159715</color>
+    <color name="blue">#0099c5</color>
+    <color name="start_color">#005796</color>
+    <color name="end_color">#6a2016</color>
+
+    <!--balance indicator color-->
+    <color name="less_than_100">#5b0303</color>
+    <color name="less_than_200">#964e01</color>
+    <color name="excess">#114911</color>
+
+    <color name="selected_bottom_menu">#ff7b00</color>
+    <color name="un_selected_bottom_menu">#dedede</color>
+
+    <color name="negative_selected">#36464d</color>
+    <color name="negative_un_selected">#2A353A</color>
+
+    <color name="positive_selected">#56d9ff</color>
+    <color name="positive_un_selected">#0099c5</color>
+
+    <color name="profile_badge">#eaf1f4</color>
+
+    <!--order/top-up status color-->
+    <color name="pending_bg">#bf423e</color>
+    <color name="in_kitchen">#c48045</color>
+    <color name="served_approved">#4b833a</color>
+    <color name="canceled">#000000</color>
+
+</resources>

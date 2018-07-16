@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_profile_layout"
+    style="@style/child_container.LIST">
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        style="@style/left_icon"
+        android:src="@mipmap/notification" />
+
+    <LinearLayout
+        android:id="@+id/sub_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/notification_icon"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/notification_title"
+            style="@style/text_style.SUB_HEAD_LINE_DARK"
+            android:layout_weight="1"
+            android:text="@string/common_google_play_services_enable_title" />
+
+        <TextView
+            android:id="@+id/created_on"
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:text="@string/date_of_birth"
+            android:textColor="@color/hint_color" />
+    </LinearLayout>
+
+
+    <!--android:ellipsize="end"-->
+    <!--android:singleLine="true"-->
+    <TextView
+        android:id="@+id/notification_body"
+        style="@style/text_style.NORMAL_CAPTION_DARK"
+        android:layout_below="@+id/sub_date_layout"
+        android:layout_toEndOf="@+id/notification_icon"
+        android:layout_toRightOf="@+id/notification_icon"
+        android:text="@string/edit_profile_summary"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/hint_color" />
+
+</RelativeLayout>

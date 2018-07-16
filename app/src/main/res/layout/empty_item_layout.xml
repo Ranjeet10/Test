@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_recycler_item_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_sentiment_very_dissatisfied_black_48dp"
+        android:tint="@color/light_white_50" />
+
+    <TextView
+        android:id="@+id/error_text_view"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_gravity="center"
+        android:textColor="@color/very_light_grey"
+        android:layout_marginTop="5dip"
+        android:text="@string/there_are_not_items" />
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style.NORMAL_CAPTION_DARK"
+                android:layout_gravity="center"
+                android:text="@string/current_balance" />
+
+            <ImageView
+                android:id="@+id/refresh_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:src="@mipmap/ic_sync_black_18dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/current_balance_text_view"
+            style="@style/text_style.HEAD_LINE_DARK"
+            android:layout_gravity="center"
+            android:text="@string/total_value"
+            android:textStyle="bold" />
+
+       <include layout="@layout/enter_balance_layout"/>
+
+        <LinearLayout
+            android:id="@+id/top_up_at_venue_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/text_style.NORMAL_DARK"
+                android:layout_marginBottom="10dip"
+                android:text="@string/top_up_up_at_venue"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <!--seating place-->
+
+            <include layout="@layout/spinner_seating_place_layout" />
+
+            <Button
+                android:id="@+id/btn_request_topup_at_venue"
+                style="@style/button_normal_style.PROCEED"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:text="@string/btn_top_up_up_at_venue"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/not_checked_in_text_view"
+            style="@style/text_style.NORMAL_CAPTION_DARK"
+            android:layout_margin="10dip"
+            android:text="@string/you_are_not_checked_in"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_centerVertical="true"
+                android:background="@color/very_light_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:padding="10dip"
+                android:text="@string/or"
+                android:textColor="@color/very_dark_grey"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_margin="10dip"
+            android:text="@string/topup_with"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:visibility="gone"
+            android:text="@string/coming_soon" />
+
+        <include layout="@layout/topup_wallets_layout" />
+    </LinearLayout>
+</ScrollView>

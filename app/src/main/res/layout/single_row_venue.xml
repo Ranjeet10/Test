@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dip"
+    android:layout_marginBottom="3dip">
+
+    <ImageView
+        android:id="@+id/venue_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/venue" />
+
+    <View
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_shadow" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/venue_name_text_view"
+            style="@style/text_style.SUB_HEAD_LINE_LIGHT"
+            android:text="@string/venue_name"
+            android:textStyle="bold" />
+
+        <com.envent.bottlesup.mvp.view.customview.BottlesUpNormalTextView
+            android:id="@+id/venue_type_text_view"
+            style="@style/text_style.NORMAL_CAPTION_LIGHT"
+            android:text="@string/venue_type"
+            android:textColor="@color/light_white" />
+
+        <com.envent.bottlesup.mvp.view.customview.BottlesUpNormalTextView
+            android:id="@+id/venue_location_text_view"
+            style="@style/text_style.NORMAL_CAPTION_LIGHT"
+            android:text="@string/venue_location" />
+
+        <TextView
+            android:id="@+id/venue_distance_text_view"
+            style="@style/text_style.NORMAL_LIGHT"
+            android:drawableLeft="@mipmap/ic_location_on_white_18dp"
+            android:drawablePadding="4dip"
+            android:text="@string/venue_distance" />
+    </LinearLayout>
+
+</RelativeLayout>

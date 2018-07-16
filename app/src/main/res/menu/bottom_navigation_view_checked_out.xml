@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_menu_venue"
+        android:icon="@mipmap/location"
+        android:title="@string/consumptionHistoryVenue" />
+    <item
+        android:id="@+id/bottom_menu_wallet"
+        android:icon="@mipmap/wallet"
+        android:title="@string/wallet" />
+</menu>

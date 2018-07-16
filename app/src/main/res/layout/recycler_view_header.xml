@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/feature_event_slider_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginBottom="5dip"
+        app:indicator_visibility="invisible"
+        app:layout_scrollFlags="scroll|enterAlways" />
+
+    <ImageView
+        android:id="@+id/static_banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner"
+        android:visibility="gone" />
+</LinearLayout>

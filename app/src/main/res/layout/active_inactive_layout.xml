@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/active_inactive_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/verify" />
+
+        <TextView
+            style="@style/text_style.SUB_HEAD_LINE_LIGHT"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:paddingLeft="50dip"
+            android:paddingRight="50dip"
+            android:text="@string/user_not_activated" />
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_LIGHT"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dip"
+            android:gravity="center"
+            android:paddingLeft="50dip"
+            android:paddingRight="50dip"
+            android:text="@string/please_keep_patient" />
+
+
+        <EditText
+            android:id="@+id/edit_resend_referral_code"
+            style="@style/edit_text_style"
+            android:layout_height="@dimen/_40sdp"
+            android:visibility="gone"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/edit_text_border_bg"
+            android:hint="@string/enter_referral_code"
+            android:inputType="text"
+            android:paddingLeft="@dimen/_10sdp" />
+
+        <Button
+            android:id="@+id/btn_resend_referral_code"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:visibility="gone"
+            android:background="@drawable/btn_selector_in_primary_bg"
+            android:text="@string/verify"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

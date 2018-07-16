@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card_view_container_style">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/venue_name_text_view"
+            style="@style/text_style.NORMAL_DARK"
+            android:text="@string/venue_name" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:drawablePadding="5dip"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_event" />
+
+            <TextView
+                android:id="@+id/topup_date"
+                style="@style/text_style.NORMAL_BODY_DARK"
+                android:layout_gravity="center"
+                android:text="@string/topup_date"
+                android:textColor="@color/light_grey" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/topup_amount"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/total_value"
+        android:textStyle="bold" />
+
+</RelativeLayout>

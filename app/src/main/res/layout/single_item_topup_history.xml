@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card_view_container_style"
+    android:layout_margin="0dip"
+    android:padding="@dimen/_10sdp">
+
+
+    <TextView
+        android:id="@+id/top_up_by"
+        style="@style/text_style.NORMAL_DARK"
+        android:text="@string/venue_name" />
+
+    <TextView
+        android:id="@+id/top_up_date_and_venue"
+        style="@style/text_style.NORMAL_BODY_DARK"
+        android:layout_below="@+id/top_up_by"
+        android:layout_marginTop="5dip"
+        android:drawablePadding="5dip"
+        android:text="@string/topup_date"
+        android:textColor="@color/hint_color" />
+
+
+    <ImageView
+        android:id="@+id/left_icon"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dip"
+        android:layout_marginRight="10dip"
+        android:src="@mipmap/wallet"
+        android:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/topup_amount"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/left_icon"
+        android:layout_marginTop="5dip"
+        android:text="@string/total_value" />
+
+
+</RelativeLayout>

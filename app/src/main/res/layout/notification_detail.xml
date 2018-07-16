@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_profile_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_detail" />
+
+
+    <TextView
+        android:id="@+id/notification_title"
+        style="@style/text_style.HEAD_LINE_DARK"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/common_google_play_services_enable_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/notification_type"
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:background="@color/bg"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp"
+            android:text="@string/date_of_birth"
+            android:textColor="@color/hint_color" />
+
+        <TextView
+            android:id="@+id/created_on"
+            style="@style/text_style.NORMAL_CAPTION_DARK"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/date_of_birth"
+            android:textColor="@color/hint_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/notification_body"
+        style="@style/text_style.SUB_HEAD_LINE_DARK"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/edit_profile_summary"
+        android:textColor="@color/hint_color" />
+
+</LinearLayout>

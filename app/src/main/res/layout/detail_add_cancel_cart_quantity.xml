@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/increment_decrement_quantity_layout" />
+
+
+    <EditText
+        android:id="@+id/edt_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg"
+        android:gravity="top|left"
+        android:hint="@string/special"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:maxLength="200"
+        android:scrollbars="none"
+        android:visibility="visible" />
+
+</LinearLayout>

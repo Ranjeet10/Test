@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/edit_profile_label"
+        android:text="@string/full_name" />
+
+    <EditText
+        android:id="@+id/name"
+        style="@style/edit_profile_edit_text"
+        android:text="@string/user_name" />
+
+
+    <TextView
+        style="@style/edit_profile_label"
+        android:text="@string/date_of_birth" />
+
+    <TextView
+        android:id="@+id/dob"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/edit_text_under_line"
+        android:enabled="false"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="1995-06-28" />
+
+    <TextView
+        style="@style/edit_profile_label"
+        android:text="@string/gender" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_gender"
+        style="@style/radio_group_style"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="2dip"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            style="@style/radio_button_style"
+            android:layout_marginLeft="0dip"
+            android:enabled="false"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            style="@style/radio_button_style"
+            android:enabled="false"
+            android:text="@string/female" />
+
+        <RadioButton
+            android:id="@+id/radio_other"
+            style="@style/radio_button_style"
+            android:enabled="false"
+            android:text="@string/other" />
+    </RadioGroup>
+
+    <TextView
+        style="@style/edit_profile_label"
+        android:text="@string/email_address" />
+
+    <EditText
+        android:id="@+id/profile_email"
+        style="@style/edit_profile_edit_text"
+        android:text="@string/email_address_value" />
+
+
+    <TextView
+        style="@style/edit_profile_label"
+        android:text="@string/phone_number" />
+
+    <EditText
+        android:id="@+id/profile_phone"
+        style="@style/edit_profile_edit_text"
+        android:enabled="false"
+        android:text="@string/phone_number_value" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_selector_in_primary_bg"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:visibility="gone"
+
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Date Time" />
+
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Name" />
+
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Table" />
+
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Amount" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="24th Feb" />
+
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="Ram Mandal" />
+
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="08" />
+
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="2400 /-" />
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

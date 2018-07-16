@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_dashboard" />
+
+    <include layout="@layout/balance_layout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        style="@style/nested_scroll_view_style">
+
+        <LinearLayout style="@style/nested_scroll_view_container_style">
+
+
+            <android.support.v7.widget.CardView style="@style/card_view_style">
+
+                <LinearLayout
+                    style="@style/card_view_container_style"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/restaurant_cafe_name"
+                        style="@style/text_style.NORMAL_DARK"
+                        android:text="@string/venue_name"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/restaurant_cafe_address"
+                        style="@style/text_style.NORMAL_BODY_DARK"
+                        android:text="@string/venue_location" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/cart_items_layout" />
+
+            <include layout="@layout/sub_total_layout" />
+
+            <include layout="@layout/you_saved_layout" />
+
+            <include layout="@layout/order_type_layout" />
+
+            <Button
+                android:id="@+id/btn_proceed"
+                style="@style/button_normal_style.PROCEED"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dip"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:text="@string/proceed" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/top_header_layout"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/logged_in_header"
+        android:layout_width="match_parent"
+        android:layout_height="130dip"
+        android:background="#FFDF00"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_centerVertical="true"
+            android:padding="10dip"
+            android:src="@mipmap/ic_launcher_round"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/user_image"
+            android:layout_toRightOf="@+id/user_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name_text_view"
+                style="@style/text_style.SUB_HEAD_LINE_VERY_DARK"
+                android:text="@string/user_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_balance_text_view"
+                style="@style/text_style.NORMAL_DARK"
+                android:text="@string/user_balance" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

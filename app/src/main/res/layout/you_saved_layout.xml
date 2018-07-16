@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/you_saved_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:background="#4b707b"
+    android:paddingLeft="20dip">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/saved" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/text_style.NORMAL_LIGHT"
+            android:text="@string/you_saved"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/you_saved_price_text_view"
+            style="@style/text_style.NORMAL_CAPTION_LIGHT"
+            android:text="@string/total_value"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider_food_drink"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/static_banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner"
+                android:visibility="gone" />
+            <!--<Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"/>-->
+        </FrameLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/food_drink_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="visible"
+            app:layout_scrollFlags="enterAlways"
+            app:tabIndicatorColor="@color/selected_bottom_menu"
+            app:tabIndicatorHeight="2dip"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/selected_bottom_menu"
+            app:tabTextAppearance="@style/TabTextAppearance"
+            app:tabTextColor="@color/light_white" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/food_drink_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include layout="@layout/empty_item_layout" />
+</android.support.design.widget.CoordinatorLayout>

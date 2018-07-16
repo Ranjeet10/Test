@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/skipTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"
+            android:padding="15dp"
+            android:text="Skip"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/firstDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+            <View
+                android:id="@+id/secondDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+            <View
+                android:id="@+id/thirdDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+            <View
+                android:id="@+id/forthDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+            <View
+                android:id="@+id/fiftDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+            <View
+                android:id="@+id/sixthDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+            <View
+                android:id="@+id/seventhDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+            <View
+                android:id="@+id/eightDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/circle_view_grey" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity=""
+            android:layout_margin="20dp"
+            android:padding="15dp"
+            android:text="Next"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

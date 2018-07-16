@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    >
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+   android:padding="8dp"
+    android:background="#e4e4e4"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       style="@style/text_style.HEAD_LINE_DARK"
+        android:text="Ram mandal"
+
+        />
+
+
+    <TextView
+        style="@style/text_style.NORMAL_BODY_DARK"
+        android:text="Pending"
+      android:layout_toLeftOf="@+id/movetoserved"
+         android:layout_toStartOf="@+id/movetoserved"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+     android:padding="2dp"
+        android:background="#FF018BC5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/movetoserved"
+
+
+        >
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text_style.NORMAL_LIGHT"
+            android:text="Move to Active"
+            android:paddingRight="4dp"
+           android:textSize="11sp"
+            android:paddingLeft="2dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
+
+
+
+  <include layout="@layout/tempcustomlayout_including"/>
+
+
+
+
+
+</LinearLayout>

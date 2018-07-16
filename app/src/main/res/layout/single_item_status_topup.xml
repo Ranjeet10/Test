@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/top_up_id"
+        style="@style/text_style.NORMAL_DARK"
+        android:text="@string/topup_id" />
+
+    <TextView
+        android:id="@+id/top_type"
+        style="@style/text_style.NORMAL_CAPTION_DARK"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_toEndOf="@+id/top_up_id"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/top_up_id"
+        android:text="@string/topup_type" />
+
+    <TextView
+        android:id="@+id/venue_name"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_below="@+id/top_up_id"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="@string/venue_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/created_on"
+        style="@style/text_style.NORMAL_BODY_DARK"
+        android:layout_below="@+id/venue_name"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="@string/date_of_birth" />
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/text_style.NORMAL_BODY_DARK"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/status_pending_bg"
+        android:text="@string/pending"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/amount"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/status"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/rs"
+        android:textColor="@color/dark_grey"
+        android:textStyle="bold" />
+</RelativeLayout>

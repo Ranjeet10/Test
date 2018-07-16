@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_detail" />
+
+    <RelativeLayout
+        android:id="@+id/edit_profile_layout"
+        style="@style/child_container.LIST">
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            style="@style/left_icon"
+            android:src="@mipmap/ic_person_black_24dp" />
+
+        <TextView
+            android:id="@+id/profile"
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_toRightOf="@+id/profile_icon"
+            android:text="@string/edit_profile" />
+    </RelativeLayout>
+
+    <include layout="@layout/horizontal_line" />
+
+    <RelativeLayout
+        android:id="@+id/change_password_layout"
+        style="@style/child_container.LIST">
+
+        <ImageView
+            android:id="@+id/change_password_icon"
+            style="@style/left_icon"
+            android:src="@mipmap/ic_lock_black_24dp" />
+
+        <TextView
+            android:id="@+id/change_password"
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_toRightOf="@+id/change_password_icon"
+            android:text="@string/change_password" />
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_below="@+id/change_password"
+            android:textColor="@color/hint_color"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/change_password_icon"
+            android:text="@string/change_password_summary" />
+    </RelativeLayout>
+
+    <include layout="@layout/horizontal_line" />
+
+    <RelativeLayout style="@style/child_container"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/change_notification_icon"
+            style="@style/left_icon"
+            android:src="@mipmap/notification" />
+
+        <TextView
+            android:id="@+id/change_notification"
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_toRightOf="@+id/change_notification_icon"
+            android:text="@string/change_notification" />
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_below="@+id/change_notification"
+            android:textColor="@color/hint_color"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/change_notification_icon"
+            android:text="@string/change_notification_summary" />
+
+        <Switch
+            android:id="@+id/enable_disable_notification_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <include layout="@layout/horizontal_line" />
+
+    <RelativeLayout style="@style/child_container">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/app_info"
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_toRightOf="@+id/app_logo"
+            android:text="@string/app_version" />
+
+        <TextView
+            android:id="@+id/app_version"
+            style="@style/text_style.NORMAL_BODY_DARK"
+            android:layout_below="@+id/app_info"
+            android:textColor="@color/hint_color"
+            android:layout_toRightOf="@+id/app_logo"
+            android:text="@string/app_version_value" />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/horizontal_line" />
+</LinearLayout>

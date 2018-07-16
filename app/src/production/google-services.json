@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1010495173947",
+    "firebase_url": "https://bottlesupcustomerproduction.firebaseio.com",
+    "project_id": "bottlesupcustomerproduction",
+    "storage_bucket": "bottlesupcustomerproduction.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010495173947:android:8bb5240c1b324ae0",
+        "android_client_info": {
+          "package_name": "com.envent.bottlesup.pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010495173947-ll9psefithraammc50ctqhac9mbqjbcj.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1010495173947-ll9psefithraammc50ctqhac9mbqjbcj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTddrog3nVKFqaQ16Y4lLJw3o_uWIqywI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:orientation="vertical">
+
+    <TableRow>
+
+        <TextView
+            style="@style/text_style.NORMAL_DARK"
+            android:text="@string/ssid"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/ssid"
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/ssid" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            style="@style/text_style.NORMAL_DARK"
+            android:text="@string/wifi_password"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/wifi_password"
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/ssid" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            style="@style/text_style.NORMAL_DARK"
+            android:text="@string/contact"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/contact"
+            style="@style/text_style.NORMAL_DARK"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/ssid" />
+    </TableRow>
+
+</TableLayout>

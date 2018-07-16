@@ -1,0 +1,170 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'io.fabric'
+
+android {
+    flavorDimensions "default"
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.envent.bottlesup"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 5
+        versionName "5.0"
+        renderscriptTargetApi 20
+        renderscriptSupportModeEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        signingConfigs {
+            production {
+                storeFile file("/home/ronem/AndroidStudioProjects/Project-Store/KEYstore/BottlesUp/BottlesUpCustomer/credentials/bottlesupcustomer.jks")
+                storePassword "123456789"
+                keyAlias "bottlesupcustomer"
+                keyPassword "123456789"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            signingConfig signingConfigs.production
+//            minifyEnabled true
+//            shrinkResources true
+            buildConfigField("String", "khalti_api_key", '"test_public_key_b497d7ce8fd0407998489587f55080ce"')
+
+        }
+        debug {
+            debuggable true
+            buildConfigField("String", "khalti_api_key", '"test_public_key_b497d7ce8fd0407998489587f55080ce"')
+        }
+    }
+
+    productFlavors {
+        production {
+            applicationIdSuffix ".pro"
+            versionNameSuffix ".pro"
+            resValue "string", "app_name", "BottlesUp"
+
+
+            manifestPlaceholders = [
+                    onesignal_app_id               : '9b2c54a8-d350-4834-a50d-cda566bad390',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: '1010495173947'
+            ]
+
+            resValue "string", "b_google_api_key", "AIzaSyBu_h3GVlGKqQnEoRqch80SfOsQ58ahfcU"
+            resValue "string", "content_provider", "com.envent.bottlesup.pro"
+
+            buildConfigField("String", "esewa_client_id", '""')
+            buildConfigField("String", "esewa_secret_key", '""')
+
+            //production
+            buildConfigField("String", "BASE_URL", '"http://live.gobottlesup.com/"')
+            //demo
+//            buildConfigField("String", "BASE_URL", '"http://demo.gobottlesup.com/"')
+        }
+
+        demo {
+            versionNameSuffix ".demo"
+            resValue "string", "app_name", "BottlesUp Demo"
+            manifestPlaceholders = [
+                    onesignal_app_id               : 'f15c34a1-beb4-4ade-a5ea-dfa81e632d2d',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: '903342334887'
+            ]
+
+            resValue "string", "b_google_api_key", "AIzaSyDMSydPT16iteR_im4Kl53T9t6oWoZgaTE"
+            resValue "string", "content_provider", "com.envent.bottlesup"
+
+            buildConfigField("String", "esewa_client_id", '"BxwRAw0WGEUMFUkrJ0w2OEg8KyUgOTU="')
+            buildConfigField("String", "esewa_secret_key", '"BhwIWQQdHQAXEV0HGBUHBwAKEANLBxMc"')
+            buildConfigField("String", "BASE_URL", '"http://demo.gobottlesup.com/"')
+        }
+
+        bottlesupdev {
+            applicationIdSuffix ".test"
+            versionNameSuffix ".test"
+            resValue "string", "app_name", "BottlesUp Test"
+            manifestPlaceholders = [
+                    onesignal_app_id               : 'f15c34a1-beb4-4ade-a5ea-dfa81e632d2d',
+                    // Project number pulled from dashboard, local value is ignored.
+                    onesignal_google_project_number: '903342334887'
+            ]
+
+            resValue "string", "b_google_api_key", "AIzaSyDMSydPT16iteR_im4Kl53T9t6oWoZgaTE"
+            resValue "string", "content_provider", "com.envent.bottlesup.test"
+            buildConfigField("String", "esewa_client_id", '"BxwRAw0WGEUMFUkrJ0w2OEg8KyUgOTU="')
+            buildConfigField("String", "esewa_secret_key", '"BhwIWQQdHQAXEV0HGBUHBwAKEANLBxMc"')
+            buildConfigField("String", "BASE_URL", '"http://bottlesup.bidheellc.com/"')
+        }
+
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+    }
+    lintOptions {
+        disable "ResourceType"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url 'https://maven.google.com' }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //design
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'me.relex:circleindicator:1.2.1@aar'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.3'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+    //injection
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //network
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    //sqlite
+    implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    implementation 'com.google.android.gms:play-services-maps:15.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
+    implementation 'com.onesignal:OneSignal:[3.8.4, 3.99.99]'
+    implementation 'com.khalti:khalti-android:1.2.3'
+    compile('com.khalti:khalti-android:1.2.3') {
+        transitive = true
+    }
+    implementation(name: "esewaSdk", ext: "aar")
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.3'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

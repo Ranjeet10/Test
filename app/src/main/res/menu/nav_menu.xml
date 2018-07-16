@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <group android:id="@+id/group_one">
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@mipmap/notification"
+            android:title="@string/notification" />
+
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@mipmap/history"
+            android:title="@string/history" />
+
+        <item
+            android:id="@+id/nav_request_status"
+            android:icon="@mipmap/status"
+            android:title="@string/status" />
+        <item
+            android:id="@+id/nav_saving"
+            android:icon="@mipmap/saving"
+            android:title="@string/saving" />
+        <item
+            android:id="@+id/nav_tutorial"
+            android:icon="@mipmap/tutorial"
+            android:title="@string/tutorial" />
+        <!--<item-->
+            <!--android:id="@+id/nav_faq"-->
+            <!--android:icon="@mipmap/faq"-->
+            <!--android:title="@string/faq" />-->
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@mipmap/support"
+            android:title="@string/support" />
+
+        <item
+            android:id="@+id/nav_invite_friend"
+            android:icon="@mipmap/invite"
+            android:title="@string/invite_a_friend" />
+
+    </group>
+    <group android:id="@+id/group_two">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@mipmap/settings"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_terms_and_condition"
+            android:icon="@mipmap/terms_and_condition"
+            android:title="@string/terms_and_condition" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/logout"
+            android:title="@string/logout" />
+
+    </group>
+
+</menu>

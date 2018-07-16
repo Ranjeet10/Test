@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_detail" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/venue_detail_venue_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/venue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/venue_detail_venue_name"
+                                style="@style/text_style.HEAD_LINE_DARK"
+                                android:text="@string/venue_name"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/venue_detail_venue_outlet_type"
+                                style="@style/text_style.SUB_HEAD_LINE_DARK"
+                                android:text="@string/venue_type" />
+
+                            <TextView
+                                android:id="@+id/venue_detail_venue_address"
+                                style="@style/text_style.NORMAL_CAPTION_DARK"
+                                android:text="@string/venue_location" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/marker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/transparent_selector"
+                            android:padding="10dip"
+                            android:src="@mipmap/ic_location_on_white_24dp"
+                            android:tint="@color/green" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/venue_detail_venue_detail"
+                        style="@style/text_style.SUB_HEAD_LINE_DARK"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text=""
+                        android:textColor="@color/very_light_grey" />
+
+                    <!--events-->
+
+                    <TextView
+                        android:id="@+id/event_key"
+                        style="@style/text_style.NORMAL_DARK"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textAllCaps="true"
+                        android:text="@string/events" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/event_recycler_view"
+                        android:layout_width="match_parent"
+                        android:background="@color/light_white_50"
+                        android:layout_height="wrap_content" />
+
+                    <include layout="@layout/wifi_layout" />
+                </LinearLayout>
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_400sdp" />
+
+                <Button
+                    android:id="@+id/btn_checkout"
+                    style="@style/button_normal_style.PROCEED"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:text="@string/check_out" />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

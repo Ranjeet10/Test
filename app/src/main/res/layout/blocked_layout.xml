@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/blocked_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/text_style.SUB_HEAD_LINE_LIGHT"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/your_account_suspended" />
+
+        <TextView
+            style="@style/text_style.NORMAL_BODY_LIGHT"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/please_contact_customer_care" />
+
+        <ImageView
+            android:id="@+id/btn_customer_care_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/call" />
+    </LinearLayout>
+
+</RelativeLayout>

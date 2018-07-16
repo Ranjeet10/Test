@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/food_drink_name_text_view"
+        style="@style/text_style.SUB_HEAD_LINE_DARK"
+        android:text="@string/drink_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/food_drink_menu_price_text_view"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_marginTop="10dip"
+        android:text="@string/menu_price" />
+
+    <TextView
+        android:id="@+id/food_drink_bottles_up_price_text_view"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_marginTop="5dip"
+        android:text="@string/bottles_up_price"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/food_drink_total_saving_text_view"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_marginTop="5dip"
+        android:text="@string/total_saving"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:id="@+id/tax_inclusive_exclusive_view"
+        style="@style/text_style.NORMAL_DARK"
+        android:layout_marginTop="5dip"
+        android:text="@string/tax_inclusive_exclusive"
+        android:textColor="@color/green" />
+
+</LinearLayout>

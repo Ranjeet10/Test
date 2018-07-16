@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/on_my_way_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        style="@style/text_style.NORMAL_CAPTION_DARK"
+        android:padding="10dip"
+        android:text="@string/select_arrival_time" />
+
+    <RadioGroup
+        android:id="@+id/on_my_way_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_10"
+            style="@style/radio_button_style"
+            android:layout_marginLeft="0dip"
+            android:text="@string/ten_min" />
+
+        <RadioButton
+            android:id="@+id/radio_20"
+            style="@style/radio_button_style"
+            android:layout_marginLeft="0dip"
+            android:text="@string/twenty_min" />
+
+        <RadioButton
+            android:id="@+id/radio_30"
+            style="@style/radio_button_style"
+            android:layout_marginLeft="0dip"
+            android:text="@string/thirty_min" />
+
+        <RadioButton
+            android:id="@+id/radio_45"
+            style="@style/radio_button_style"
+            android:layout_marginLeft="0dip"
+            android:text="@string/forty_five_min" />
+
+        <RadioButton
+            android:id="@+id/radio_60"
+            style="@style/radio_button_style"
+            android:layout_marginLeft="0dip"
+            android:text="@string/sixty_min" />
+    </RadioGroup>
+</LinearLayout>

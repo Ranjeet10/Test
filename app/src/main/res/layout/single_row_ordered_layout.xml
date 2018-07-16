@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/note"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/transparent_selector"
+            android:padding="@dimen/_7sdp"
+            android:src="@mipmap/terms_and_condition"
+            android:tint="@color/blue" />
+
+        <TextView
+            android:id="@+id/item"
+            style="@style/text_style.SUB_HEAD_LINE_VERY_DARK"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/note"
+            android:text="Fresh Seasonal Juice"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:id="@+id/row_size">
+
+            <TextView
+                style="@style/text_style.NORMAL_DARK"
+                android:text="@string/size" />
+
+            <TextView
+                android:id="@+id/size"
+                style="@style/text_style.NORMAL_DARK"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/value" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_mixer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style.NORMAL_DARK"
+                android:text="@string/mixtures" />
+
+            <TextView
+                android:id="@+id/mixer"
+                style="@style/text_style.NORMAL_DARK"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/value" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style.NORMAL_DARK"
+                android:text="@string/qty" />
+
+            <TextView
+                android:id="@+id/qty"
+                style="@style/text_style.NORMAL_DARK"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/value" />
+
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style.NORMAL_DARK"
+                android:text="@string/rate" />
+
+            <TextView
+                android:id="@+id/rate"
+                style="@style/text_style.NORMAL_DARK"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/value" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_style.NORMAL_DARK"
+                android:text="@string/amount"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/amount"
+                style="@style/text_style.NORMAL_DARK"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/value"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
